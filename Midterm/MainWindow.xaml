@@ -1,0 +1,48 @@
+﻿<Window x:Class="Midterm.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Midterm"
+        mc:Ignorable="d"
+        Title="Ryan Barrett Midterm (Option A Part A)" Height="450" Width="800" Topmost="True">
+    <Grid>
+        <StackPanel Orientation="Horizontal">
+        <GroupBox Header="Letter Grid Selection" Margin="10,10" >
+            <StackPanel Margin="10">
+                <RadioButton Content="3x3" Checked="RadioButton_Checked" IsChecked="True"/>
+                <RadioButton Content="4x4" Checked="RadioButton_Checked_1"/>
+                <RadioButton Content="5x5" Checked="RadioButton_Checked_2"/>
+                <RadioButton Content="6x6" Checked="RadioButton_Checked_3"/>
+                <Button Content="Button" Click="Button_Click"/>
+
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="Current Letter Grid" Margin="15,10">
+            <StackPanel Margin="10">
+                <Border BorderBrush="Black" BorderThickness="1">
+                    <Label FontSize="8">Current grid will also be stored in sometext.txt</Label>
+                </Border>
+                <CheckBox Content="Hide grid(try to guess whats there)" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked"  FontSize="10"/>
+                <Border BorderBrush="Black" BorderThickness="1">
+                    <TextBlock x:Name="tbOutput"  Text="No grid generated" Margin="10" Opacity="0.99"/>
+                </Border>
+                
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="String To Search" Margin="15,10" Width="250">
+            <StackPanel>
+                <TextBox x:Name="tbSearch" TextWrapping="Wrap" Width="120"/>
+                <Button Content="Search Grid" Click="Button_Click_1"/>
+                <Label></Label>
+                <Label>Results</Label>
+                <Border BorderBrush="Black" BorderThickness="1">
+                    <ScrollViewer x:Name="svSearchOutput" Height="123"/>
+                </Border>
+
+            </StackPanel>
+        </GroupBox>
+        </StackPanel>
+
+    </Grid>
+</Window>
